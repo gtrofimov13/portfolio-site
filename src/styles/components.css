@@ -1,0 +1,122 @@
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--text);
+  }
+  
+  /* Project Card */
+  .project-card {
+    background-color: var(--background);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-card h3 {
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 15px;
+  }
+  
+  .tech-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tech-item {
+    background-color: var(--secondary);
+    color: var(--background);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+  
+/* Buttons */
+.button {
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .button:hover {
+    background-color: var(--secondary);
+    color: var(--text); /* This ensures high contrast on hover */
+  }
+  
+  .button:focus {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+  }
+  /* Dark Mode Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary);
+    transition: .4s;
+    border-radius: 20px;
+  }
+  
+  .toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--background);
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .toggle-switch input:checked + .toggle-slider {
+    background-color: var(--secondary);
+  }
+  
+  .toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+  }
+  
+  /* Optional: add focus styles for accessibility */
+  .toggle-switch input:focus + .toggle-slider {
+    box-shadow: 0 0 1px var(--secondary);
+  }
