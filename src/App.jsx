@@ -11,11 +11,19 @@ import './styles/components.css';
 import './styles/pages.css';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Check if there's a stored preference
+    const savedMode = localStorage.getItem('darkMode');
+    // Return true if the saved value is 'true', otherwise false
+    return savedMode === 'true';
+  });
 
   useEffect(() => {
     const root = document.documentElement;
     const colors = isDarkMode ? darkColors : lightColors;
+    
+    // Update localStorage when isDarkMode changes
+    localStorage.setItem('darkMode', isDarkMode);
     
     Object.entries(colors).forEach(([key, value]) => {
       root.style.setProperty(`--${key}`, value);

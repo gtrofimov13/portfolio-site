@@ -17,9 +17,14 @@ function Contact() {
     // Handle form submission here
   };
 
+  const handleResumeRequest = () => {
+    console.log('Resume requested');
+    // Handle resume request here
+  };
+
   return (
-    <div className="contact-container">
-      <h2 className="contact-title">Contact Me</h2>
+    <div className="window contact-container">
+      <div className="window-title">Contact Me</div>
       <form onSubmit={handleSubmit} className="contact-form">
         <input
           type="text"
@@ -49,7 +54,11 @@ function Contact() {
         ></textarea>
         <button type="submit" className="button">Send Message</button>
       </form>
-    </div>
+      {/* <div className="resume-request">
+        <button onClick={handleResumeRequest} className="button">Request Resume</button>
+      </div>
+    */}
+      </div>
   );
 }
 

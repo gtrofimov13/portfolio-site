@@ -24,12 +24,14 @@ function Projects() {
   ];
 
   return (
-    <div className="projects-container">
-      <h2 className="projects-title">My Projects</h2>
-      <div className="project-grid">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+    <div className="window">
+      <div className="window-title">My Projects</div>
+      <div className="window-content">
+        <div className="project-grid">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
       </div>
     </div>
   );
